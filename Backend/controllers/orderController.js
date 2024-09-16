@@ -88,7 +88,7 @@ export const cancelOrder = async (req, res) => {
     if (!order) {
       return res.status(404).json({ error: "Order not found" });
     }
-    console.log(order.status);
+
     if (order.status !== "Pending") {
       return res
         .status(400)

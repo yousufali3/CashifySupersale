@@ -102,7 +102,7 @@ export const updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
     const { images, ...updateData } = req.body;
-    console.log(updateData);
+
     const product = await Product.findByIdAndUpdate(id, updateData, {
       new: true,
       runValidators: true,
