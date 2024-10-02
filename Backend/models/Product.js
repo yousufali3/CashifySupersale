@@ -82,9 +82,9 @@ productSchema.virtual("url").get(function () {
 });
 
 // Static method to find products by model
-productSchema.statics.findByModel = function (model) {
-  return this.find({ model: new RegExp(model, "i") });
-};
+// productSchema.statics.findByModel = function (model) {
+//   return this.find({ model: new RegExp(model, "i") });
+// };
 
 // Instance method to update stock
 productSchema.methods.updateStock = function (quantity) {

@@ -1,0 +1,64 @@
+.carousel-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-slide {
+  width: 100%;
+  /* Ensure each slide takes up the full width */
+}
+
+.carousel-image {
+  width: 100%;
+  /* Ensure the image fills the width of its container */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Cover the container without stretching */
+}
+
+/* Custom arrows styling */
+.slick-prev,
+.slick-next {
+  color: black;
+  /* Arrow color */
+  z-index: 10;
+  /* Ensure arrows are above carousel content */
+}
+
+.slick-prev {
+  left: 10px;
+  /* Position the left arrow */
+}
+
+.slick-next {
+  right: 10px;
+  /* Position the right arrow */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px;
+  /* Arrow size */
+  color: rgb(255, 255, 255);
+  /* Arrow color */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 640px) {
+ 
+
+  .carousel-image {
+    height: auto;
+    max-height: 80vh;
+    width: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 18px;
+    /* Adjust arrow size for smaller screens */
+  }
+}

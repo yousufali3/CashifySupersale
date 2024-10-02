@@ -31,9 +31,10 @@ export const register = async (req, res) => {
       password: hashedPassword,
     });
 
-    res
-      .status(201)
-      .json({ user: user, message: "User registered successfully" });
+    res.status(201).json({
+      user: user,
+      message: "Registration successful! Welcome aboard.",
+    });
   } catch (error) {
     console.error("Registration error:", error);
     res.status(500).json({ error: "Registration failed" });
@@ -63,7 +64,12 @@ export const login = async (req, res) => {
       expiresIn: process.env.JWT_EXPIRES_IN || "1h",
     });
 
-    res.json({ user: user, token: token, userId: user._id });
+    res.json({
+      user: user,
+      token: token,
+      userId: user._id,
+      message: "Login successful! Welcome back.",
+    });
   } catch (error) {
     console.error("Login error:", error);
     res.status(500).json({ error: "Login failed" });
